@@ -18,7 +18,7 @@ $nav = "";
 <body>
     <?php include('./common/header.php'); ?>
     
-    <p>phpでCRUD練習。<br><a href='./top' class='btn'>会員登録あり掲示板</a></p>
+    <p>phpでCRUD練習。<br><a href='./top' class='btn'>会員登録ありお問い合わせ掲示板</a></p>
 
     <?php include('./common/footer.php'); ?>
 </body>
