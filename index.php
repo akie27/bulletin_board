@@ -13,13 +13,13 @@ $nav = "";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $title; ?></title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./common/style.css">
 </head>
 <body>
-    <?php include('./common/header.php'); ?>
+    <?php require('./common/header.php'); ?>
     
-    <p>phpでCRUD練習。<br><a href='./top' class='btn'>会員登録ありお問い合わせ掲示板</a></p>
+    <p>Web1<br><a href='./top' class='btn'>会員登録ありお問い合わせ掲示板</a></p>
 
-    <?php include('./common/footer.php'); ?>
+    <?php require('./common/footer.php'); ?>
 </body>
 </html>
