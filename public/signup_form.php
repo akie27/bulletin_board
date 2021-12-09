@@ -36,13 +36,13 @@ unset($_SESSION['login_err']);
     <?php endif; ?>
 
     <form action="register.php" method="POST" class="form_items register_form">
-
+    
         <div class="resister_items">
             <label for="login_id">ログインID</label>
             <input type="text" name="login_id" placeholder="ログインID" class="register_input">
         </div>
         <div class="resister_items">
-            <label for="user_name">会員名</label>
+            <label for="user_name">会員名(表示名)</label>
             <input type="text" name="user_name" placeholder="会員名" class="register_input">
         </div>
         <div class="resister_items">
@@ -55,9 +55,9 @@ unset($_SESSION['login_err']);
             <input type="password" name="pass_conf" placeholder="パスワード(確認)" class="register_input">
             <input type="hidden" name="csrf_token" value="<?php echo h(setToken()); ?>">
         </div>
-
+        
         <div class="button_flex">
-            <input type="button" value="ログインする" onclick="location.href='login_form.php'" class="btn register_btn">
+            <a href="login_form.php" class="btn register_btn">ログイン画面へ</a>
             <input type="submit" value="新規登録" class="btn register_btn">            
         </div>
     </form>

@@ -2,7 +2,7 @@
     session_start();
 
     require_once '../classes/UserLogic.php';
-    
+
     $res = UserLogic::checkLgoin();
     if($res){
         header('Location: mypage.php');
@@ -45,9 +45,9 @@
             <p><?php echo $err['pass']; ?></p>
         <?php endif; ?>
 
-        <input type="submit" name="login" value="ログイン" class="btn" onclick="location.href='login.php'">
-        <input type="button" name="register" value="新規会員登録" class="btn" onclick="location.href='signup_form.php'">
-
+        <input type="submit" name="login" value="ログイン" class="btn">
+        <a href="signup_form.php" class="btn">新規登録はこちら</a>
+        
     </form>
 
     <?php require('../common/footer.php'); ?>

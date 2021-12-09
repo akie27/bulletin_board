@@ -50,7 +50,7 @@ h1,p {
     width: fit-content;
 }
 
-input {
+input,button,a{
     margin: 1rem 0;
     padding: 1rem;
 }
@@ -59,12 +59,18 @@ input {
     margin: 2rem;
 }
 
-/* トップページ、新規会員登録画面 */
+/* ログインページ、新規会員登録画面 */
     .form_items {
         display: flex;
         flex-direction: column;
         width: 40%;
         margin: 2rem auto;
+    }
+    a.btn {
+        background: #a9a9a936;
+        text-align: center;
+        color: inherit;
+        font-size: smaller;
     }
 
 /* 新規会員登録画面 */

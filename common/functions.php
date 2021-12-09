@@ -22,7 +22,7 @@ function setToken(){
     // フォームからそのトークンを送信
     // 送信後の画面でそのトークンを照会
     // トークンを削除
-    $csrg_token = bin2hhex(random_bytes(32));
+    $csrg_token = bin2hex(random_bytes(32));
     $_SESSION['csrf_token'] = $csrf_token;
 
     return $csrf_token;
