@@ -1,3 +1,3 @@
 <footer>
-    by
+    web1ちゃんねる
 </footer>

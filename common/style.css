@@ -30,30 +30,105 @@ max-width: 100%;
 }
 
 .btn {
-    font-size: 1.4rem;
-    font-weight: 700;
-    line-height: 1.5;
-    position: relative;
-    display: inline-block;
-    padding: 1rem 1rem;
+    line-height: 1.5;   
     cursor: pointer;
-    /* transition: all 0.3s; */
-    text-align: center;
-    vertical-align: middle;
-    color: #fff;
-    background-color: grey;
     border-radius: 1vh;
-    text-decoration: none;
-    letter-spacing: 0.1em;
-    border: none;
+    border: 1px solid gray;
 }
 
 .btn:hover {
 color: #111;
-/* background: #f56500; */
+background:darkgray;
 }
 
-p {
-    margin: auto;
+.button_flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+h1,p {
     width: fit-content;
 }
+
+input {
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+.title{
+    margin: 2rem;
+}
+
+/* トップページ、新規会員登録画面 */
+    .form_items {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin: 2rem auto;
+    }
+
+/* 新規会員登録画面 */
+    .regist_title{
+        margin: auto;
+    }
+    .register_form {
+        width: 50%;
+    }
+    label {
+        display: inline-block;
+        margin-right: 2rem;
+        width: 13rem;
+    }
+    p.warning {
+        font-size: xx-small;
+    }
+    .register_input{
+        width: 70%;
+    }
+    .register_btn{
+        width: 15rem;        
+        margin-top: 20%;
+    }
+
+/* 投稿一覧画面 */
+    .list_form {
+        width: auto;
+        margin: 2rem;
+    }
+    .list_items {
+        padding: 2rem;
+        border: 2px solid gainsboro;
+    }
+    .list_titles, .reply_titles, .flex_column {
+        display: flex;
+    }
+    span {
+        margin-right: 2rem;
+    }
+    .list_msg{
+        margin-left: 2rem;
+    }
+
+    .reply_items {
+        margin: 1rem 0 1rem 3rem;
+    }
+    .reply_arrow {
+        font-size: xx-large;
+    }
+    .flex_column{
+        flex-direction: column;
+    }
+
+    .reply_msg {
+        width: 60%;
+    }
+    .list_btn {
+        width: 8rem;
+        margin: 0 .5rem;
+    }
+    .delete_url {
+        text-decoration: underline;
+    }
+    .post_msg {
+        width: 85%;
+    }
