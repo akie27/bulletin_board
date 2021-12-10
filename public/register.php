@@ -1,5 +1,5 @@
 <?php
-ini_set('display_errors', true); 
+ini_set('display_errors', true); //エラー確認
 
 session_start();
 require_once '../classes/UserLogic.php';
@@ -24,7 +24,7 @@ if(!$user_name = filter_input(INPUT_POST, 'user_name')){
 }
 $pass = filter_input(INPUT_POST, 'pass');
 // 正規表現
-if(!preg_match("/\A[a-z\d]{8,100}+\z/i",$pass)){
+if(!preg_match("/\A[a-z\d]{8,100}+\z/i", $pass)){
     $err[] = 'パスワードは半角英数字８文字以上100文字以下にしてください。';
 }
 $pass_conf = filter_input(INPUT_POST, 'pass_conf');
@@ -58,7 +58,6 @@ if(count($err) === 0){
         <?php else: ?>            
             <p>ユーザ登録が完了しました。</p>
     <?php endif; ?>
-    <a href="./signup_form.php">戻る</a>
-    <a href="./login.php">ログイン画面へ</a>
+    <a href="./login_form.php">ログイン画面へ</a>
 </body>
 </html>

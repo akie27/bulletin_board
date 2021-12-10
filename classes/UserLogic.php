@@ -1,6 +1,7 @@
 <?php
-require_once '../common/dbc.php';
 ini_set('display_errors', true); //エラー確認
+
+require_once '../common/dbc.php';
 
 class UserLogic{
     /**
@@ -39,7 +40,7 @@ class UserLogic{
         $res = false;
         // ユーザをログインIDから検索して取得
         $user = self::getUserByLoginId($login_id);
-
+        
         if(!$user){
             $_SESSION['msg'] = 'ログインIDが一致しません';
             return $res;
@@ -51,11 +52,12 @@ class UserLogic{
             session_regenerate_id(true);
             $_SESSION['login_user'] = $user;
             $res = true;
+            header ('Location: mypage.php');
+            return $res;
+        }else{
+            $_SESSION['msg'] = 'パスワードが一致しません';        
             return $res;
         }
-
-        $_SESSION['msg'] = 'パスワードが一致しません';
-        return $res;
     }
 
     /**
@@ -94,7 +96,7 @@ class UserLogic{
 
         //セッションにログインユーザが入っていなかったらfalse
         if(isset($_SESSION['login_user']) && $_SESSION['login_user']['id'] > 0){
-            return $res = true;
+            return $res;
         }
     }
 
@@ -104,7 +106,7 @@ class UserLogic{
      * @return bool $res
      */
     public static function logout(){
-        $_SESSION = aaray();
+        $_SESSION = array();
         session_destroy();
     }
 

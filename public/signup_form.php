@@ -1,6 +1,4 @@
 <?php
-ini_set('display_errors', true); 
-
 session_start();
 
 require_once '../common/functions.php';
@@ -53,6 +51,8 @@ unset($_SESSION['login_err']);
         <div class="resister_items">
             <label for="pass_conf">パスワード(確認)</label>
             <input type="password" name="pass_conf" placeholder="パスワード(確認)" class="register_input">
+        </div>
+        <div>
             <input type="hidden" name="csrf_token" value="<?php echo h(setToken()); ?>">
         </div>
         

@@ -2,7 +2,7 @@
 session_start();
 require_once '../classes/UserLogic.php';
 
-if(!$logout = filter_input(IPUT_POST, 'logout')){
+if(!$logout = filter_input(INPUT_POST, 'logout')){
     exit('不正なリクエスト');
 }
 

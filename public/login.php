@@ -24,8 +24,8 @@ if(count($err) > 0){
 // ログイン成功時の処理
 $res = UserLogic::login($login_id, $pass);
 
-// ログイン失敗時の処理
-if(!$res){    
+ // ログイン失敗時の処理
+if(!$res){     
     header('Location: login_form.php');
     return;
 }
@@ -39,9 +39,9 @@ if(!$res){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ログイン完了</title>
 </head>
-<body>
-    <h2>ログイン完了</h2>
-    <p>ログインしました！</p>    
-    <a href="./mypage.php">マイページへ</a>    
+<body>         
+    <h2>ログイン完了</h2> 
+    <p>ログインしました。</p>
+    <a href="./mypage.php">マイページへ</a>
 </body>
 </html>

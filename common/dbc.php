@@ -1,7 +1,6 @@
 <?php
 // DB接続 PDOの接続オプション取得
 require 'env.php';
-ini_set('display_errors', true); //エラー確認
 
 function dbConnect(){           
     $host = DB_HOST;
