@@ -2,6 +2,7 @@
     session_start();
 
     require_once '../classes/UserLogic.php';
+    require_once '../common/functions.php';
 
     $res = UserLogic::checkLgoin();
     if($res){

@@ -1,15 +1,15 @@
 <?php
-ini_set('display_errors', true); //エラー確認
-
 session_start();
+
 require_once '../classes/UserLogic.php';
+require_once '../common/functions.php';
 
 // エラーメッセージ
 $err = [];
 
 $token = filter_input(INPUT_POST, 'csrf_token');
 //トークンがない、もしくは一致しない場合、処理を中止
-if(!isset($_SESSION['csrf_token']) || $token !== $_SESSION['csrf_token']){
+if(!isset($_SESSION['csrf_token']) || $token !== $_SESSION['csrf_token']){    
     exit('不正なリクエスト');
 }
 
@@ -49,6 +49,8 @@ if(count($err) === 0){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ユーザ登録完了画面</title>
+
+    <link rel="stylesheet" href="../common/style.css">
 </head>
 <body>
     <?php if (count($err) > 0): ?>

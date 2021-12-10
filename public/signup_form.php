@@ -52,9 +52,8 @@ unset($_SESSION['login_err']);
             <label for="pass_conf">パスワード(確認)</label>
             <input type="password" name="pass_conf" placeholder="パスワード(確認)" class="register_input">
         </div>
-        <div>
+        
             <input type="hidden" name="csrf_token" value="<?php echo h(setToken()); ?>">
-        </div>
         
         <div class="button_flex">
             <a href="login_form.php" class="btn register_btn">ログイン画面へ</a>

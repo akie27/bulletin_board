@@ -2,6 +2,7 @@
 session_start();
 
 require_once '../classes/UserLogic.php';
+require_once '../common/functions.php';
 
 // エラーメッセージ
 $err = [];
@@ -11,7 +12,7 @@ if(!$login_id = filter_input(INPUT_POST, 'login_id')){
     $err['login_id'] = 'ログインIDを記入してください。';
 }
 if(!$pass = filter_input(INPUT_POST, 'pass')){
-    $err['pass'] = 'パスワードを記入してください。';
+    $err['pass'] = 'パスワードを記入してください。';    
 }
 
 
@@ -38,6 +39,8 @@ if(!$res){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ログイン完了</title>
+
+    <link rel="stylesheet" href="../common/style.css">
 </head>
 <body>         
     <h2>ログイン完了</h2> 

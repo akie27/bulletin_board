@@ -19,9 +19,33 @@ function setToken(){
     // フォームからそのトークンを送信
     // 送信後の画面でそのトークンを照会
     // トークンを削除
-    $csrg_token = bin2hex(random_bytes(32));
+    $csrf_token = bin2hex(random_bytes(32));
     $_SESSION['csrf_token'] = $csrf_token;
 
     return $csrf_token;
 }
+
+//================================
+// ログ
+//================================
+//エラー表示/非表示の設定
+ini_set('log_errors','on');
+//エラーレベルを設定
+ini_set('error_reporting', E_ALL);
+//ログの出力ファイルを指定
+ini_set('error_log','php.log');
+
+//================================
+// デバッグ
+//================================
+//デバッグフラグ
+$debug_flg = true;
+//デバッグログ関数
+function debug($str){
+    global $debug_flg;
+    if(!empty($debug_flg)){
+    error_log('デバッグ：'.$str);
+    }
+}
+
 ?>

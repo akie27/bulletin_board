@@ -1,6 +1,4 @@
 <?php
-ini_set('display_errors', true); //エラー確認
-
 require_once '../common/dbc.php';
 
 class UserLogic{
@@ -25,6 +23,7 @@ class UserLogic{
             $res = $stm->execute($arr);
             return $res;
         } catch(\Exception $e) {
+            error_log($e, 3, '../common/error.log'); //ログを出力
             return $res;
         }
     }
@@ -51,13 +50,14 @@ class UserLogic{
             //ログイン成功
             session_regenerate_id(true);
             $_SESSION['login_user'] = $user;
-            $res = true;
-            header ('Location: mypage.php');
-            return $res;
-        }else{
-            $_SESSION['msg'] = 'パスワードが一致しません';        
+            $res = true;            
             return $res;
         }
+        
+        $_SESSION['msg'] = 'パスワードが一致しません'; 
+        var_dump($_SESSION['msg']);               
+        return $res;
+        
     }
 
     /**
@@ -69,7 +69,7 @@ class UserLogic{
         // SQLの準備
         // SQLの実行
         // SQLの結果を返す
-        $sql = 'SELECT * FROM users WHERE login_id = ?';
+        $sql = 'SELECT count(*) FROM users WHERE login_id = ?';
 
         //ログインIDを配列に入れる
         $arr = [];
@@ -96,8 +96,11 @@ class UserLogic{
 
         //セッションにログインユーザが入っていなかったらfalse
         if(isset($_SESSION['login_user']) && $_SESSION['login_user']['id'] > 0){
-            return $res;
+            return $res = true;
         }
+
+        return $res;
+
     }
 
     /**

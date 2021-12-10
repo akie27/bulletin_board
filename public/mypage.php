@@ -22,7 +22,7 @@ $login_user = $_SESSION['login_user'];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>投稿一覧画面</title>
+    <title>マイページ</title>
 
     <link rel="stylesheet" href="../common/style.css">
 </head>
@@ -35,20 +35,20 @@ $login_user = $_SESSION['login_user'];
         <div class="list_items">
             <div class="list_titles">
                 <?php foreach($bbsData as $column): ?>
-                <span><?php echo h($column['post_id']); ?></span>
-                <span><?php echo h($column['post_name']); ?></span>
+                <span><?php echo h($column['id']); ?></span>
+                <span><?php echo h($column['created_by']); ?></span>
                 <p><?php echo h($column['created_at']); ?></p>
             </div>
-            <p class="list_msg"><?php echo h($column['message']); ?></p>
+            <p class="list_msg"><?php echo h($column['msg']); ?></p>
             <div class="reply_items">
                 <div class="reply_titles">
                     <span class="reply_arrow">↪️</span>
                     <div class="flex_column">
                         <div class="list_titles">
-                            <span><?php echo h($column['post_name']); ?></span>
+                            <span><?php echo h($column['created_by']); ?></span>
                             <p><?php echo h($column['created_at']); ?></p>
                         </div>
-                        <p><?php echo h($column['message']); ?></p>
+                        <p><?php echo h($column['msg']); ?></p>
                     </div>
                 </div>
                 <?php endforeach; ?>
@@ -59,7 +59,7 @@ $login_user = $_SESSION['login_user'];
         </div>
 
         <div class="post_msg">
-            <input type="text" name="posy_msg" placeholder="投稿メッセージ" class="post_msg">
+            <input type="text" name="post_msg" placeholder="投稿メッセージ" class="post_msg">
             <input type="submit" name="post_btn" value="投稿" class="btn list_btn post_btn">
         </div>
 
