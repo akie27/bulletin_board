@@ -42,7 +42,7 @@ class UserLogic{
         $user = self::getUserByLoginId($login_id);
         
         if(!$user){
-            $_SESSION['msg'] = 'ログインIDが一致しません';
+            $_SESSION['msg'] = 'ログインIDが一致しません';            
             return $res;
         }
 
@@ -57,7 +57,6 @@ class UserLogic{
         
         $_SESSION['msg'] = 'パスワードが一致しません';              
         return $res;
-        
     }
 
     /**

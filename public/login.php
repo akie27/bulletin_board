@@ -23,7 +23,7 @@ if(count($err) > 0){
     return;
 }
 // ログイン成功時の処理
-$res = UserLogic::login($login_id, $pass);
+$res = userlogic\UserLogic::login($login_id, $pass);
 
  // ログイン失敗時の処理
 if(!$res){     
