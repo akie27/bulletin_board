@@ -1,2 +1,14 @@
 [10-Dec-2021 08:48:28 UTC] PHP Notice:  Undefined variable: _SESSION in /Applications/MAMP/htdocs/web1_bbs/public/login_form.php on line 15
 [10-Dec-2021 08:48:28 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /Applications/MAMP/htdocs/web1_bbs/public/login_form.php on line 19
+[17-Dec-2021 02:53:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method UserLogic::checkLgoin() in /Applications/MAMP/htdocs/web1_bbs/public/login_form.php:7
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/web1_bbs/public/login_form.php on line 7
+[17-Dec-2021 02:54:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method UserLogic::checkLgoin() in /Applications/MAMP/htdocs/web1_bbs/public/login_form.php:7
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/web1_bbs/public/login_form.php on line 7
+[17-Dec-2021 02:54:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method UserLogic::checkLgoin() in /Applications/MAMP/htdocs/web1_bbs/public/login_form.php:7
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/web1_bbs/public/login_form.php on line 7

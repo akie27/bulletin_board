@@ -4,7 +4,7 @@ require_once '../classes/UserLogic.php';
 require_once '../common/functions.php';
 
 //ログインしているか判定し、していなかったら新規登録画面へ返す
-$res = UserLogic::checkLogin();
+$res = userlogic\UserLogic::checkLogin();
 
 if(!$res){
     $_SESSION['login_err'] = 'ユーザを登録してログインしてください！';

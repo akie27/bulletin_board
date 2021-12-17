@@ -1,4 +1,5 @@
 <?php
+namespace userlogic;
 require_once '../common/dbc.php';
 
 class UserLogic{
@@ -54,8 +55,7 @@ class UserLogic{
             return $res;
         }
         
-        $_SESSION['msg'] = 'パスワードが一致しません'; 
-        var_dump($_SESSION['msg']);               
+        $_SESSION['msg'] = 'パスワードが一致しません';              
         return $res;
         
     }
@@ -91,7 +91,7 @@ class UserLogic{
      * @param void    
      * @return bool $res
      */
-    public static function checkLgoin(){
+    public static function checkLogin(){
         $res = false;
 
         //セッションにログインユーザが入っていなかったらfalse
