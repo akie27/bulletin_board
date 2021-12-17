@@ -34,21 +34,21 @@ $login_user = $_SESSION['login_user'];
 
         <div class="list_items">
             <div class="list_titles">
-                <?php foreach($bbsData as $column): ?>
-                <span><?php echo h($column['id']); ?></span>
-                <span><?php echo h($column['created_by']); ?></span>
-                <p><?php echo h($column['created_at']); ?></p>
+                <?php foreach($bbsData as $xxx): ?>
+                <span><?php echo h($xxx['id']); ?></span>
+                <span><?php echo h($xxx['created_by']); ?></span>
+                <p><?php echo h($xxx['created_at']); ?></p>
             </div>
-            <p class="list_msg"><?php echo h($column['msg']); ?></p>
+            <p class="list_msg"><?php echo h($xxx['msg']); ?></p>
             <div class="reply_items">
                 <div class="reply_titles">
                     <span class="reply_arrow">↪️</span>
                     <div class="flex_column">
                         <div class="list_titles">
-                            <span><?php echo h($column['created_by']); ?></span>
-                            <p><?php echo h($column['created_at']); ?></p>
+                            <span><?php echo h($xxx['created_by']); ?></span>
+                            <p><?php echo h($xxx['created_at']); ?></p>
                         </div>
-                        <p><?php echo h($column['msg']); ?></p>
+                        <p><?php echo h($xxx['msg']); ?></p>
                     </div>
                 </div>
                 <?php endforeach; ?>

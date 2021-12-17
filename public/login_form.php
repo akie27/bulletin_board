@@ -16,7 +16,6 @@
     $_SESSION = array();
     session_destroy();
 ?>
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>

@@ -23,7 +23,7 @@ class UserLogic{
             $res = $stm->execute($arr);
             return $res;
         } catch(\Exception $e) {
-            error_log($e, 3, '../common/error.log'); //ログを出力
+            error_log($e, 3, '../public/php.log'); //ログを出力
             return $res;
         }
     }
