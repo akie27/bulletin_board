@@ -12,3 +12,91 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /Applications/MAMP/htdocs/web1_bbs/public/login_form.php on line 7
+[12-Jan-2022 10:56:30 UTC] PHP Fatal error:  Uncaught Error: Class "UserLogic" not found in /Applications/MAMP/htdocs/web1_bbs/public/signup_form.php:7
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/web1_bbs/public/signup_form.php on line 7
+[12-Jan-2022 10:56:30 UTC] PHP Fatal error:  Uncaught Error: Class "UserLogic" not found in /Applications/MAMP/htdocs/web1_bbs/public/signup_form.php:7
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/web1_bbs/public/signup_form.php on line 7
+[12-Jan-2022 10:56:31 UTC] PHP Fatal error:  Uncaught Error: Class "UserLogic" not found in /Applications/MAMP/htdocs/web1_bbs/public/signup_form.php:7
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/web1_bbs/public/signup_form.php on line 7
+[13-Jan-2022 09:23:05 UTC] PHP Fatal error:  Uncaught Error: Class "UserLogic" not found in /Applications/MAMP/htdocs/web1_bbs/public/signup_form.php:7
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/web1_bbs/public/signup_form.php on line 7
+[13-Jan-2022 09:26:29 UTC] PHP Fatal error:  Uncaught Error: Class "UserLogic" not found in /Applications/MAMP/htdocs/web1_bbs/public/register.php:37
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/web1_bbs/public/register.php on line 37
+PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'pass' at row 1 in /Applications/MAMP/htdocs/web1_bbs/classes/UserLogic.php:24
+Stack trace:
+#0 /Applications/MAMP/htdocs/web1_bbs/classes/UserLogic.php(24): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/web1_bbs/public/register.php(37): userlogic\UserLogic::createUser(Array)
+#2 {main}[13-Jan-2022 09:36:01 UTC] PHP Warning:  Undefined array key "pass" in /Applications/MAMP/htdocs/web1_bbs/classes/UserLogic.php on line 50
+[13-Jan-2022 09:36:01 UTC] PHP Warning:  Undefined array key "pass" in /Applications/MAMP/htdocs/web1_bbs/classes/UserLogic.php on line 59
+PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'pass' at row 1 in /Applications/MAMP/htdocs/web1_bbs/classes/UserLogic.php:24
+Stack trace:
+#0 /Applications/MAMP/htdocs/web1_bbs/classes/UserLogic.php(24): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/web1_bbs/public/register.php(37): userlogic\UserLogic::createUser(Array)
+#2 {main}PDOException: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'pass' at row 1 in /Applications/MAMP/htdocs/web1_bbs/classes/UserLogic.php:24
+Stack trace:
+#0 /Applications/MAMP/htdocs/web1_bbs/classes/UserLogic.php(24): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/web1_bbs/public/register.php(37): userlogic\UserLogic::createUser(Array)
+#2 {main}[13-Jan-2022 09:51:05 UTC] PHP Warning:  Undefined array key "pass" in /Applications/MAMP/htdocs/web1_bbs/classes/UserLogic.php on line 50
+[13-Jan-2022 09:51:05 UTC] PHP Warning:  Undefined array key "pass" in /Applications/MAMP/htdocs/web1_bbs/classes/UserLogic.php on line 59
+[13-Jan-2022 09:54:25 UTC] PHP Warning:  Undefined array key "pass" in /Applications/MAMP/htdocs/web1_bbs/classes/UserLogic.php on line 50
+[13-Jan-2022 09:54:25 UTC] PHP Warning:  Undefined array key "pass" in /Applications/MAMP/htdocs/web1_bbs/classes/UserLogic.php on line 59
+[13-Jan-2022 09:55:58 UTC] PHP Warning:  Undefined variable $bbsData in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 37
+[13-Jan-2022 09:55:58 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 37
+[13-Jan-2022 10:19:10 UTC] PHP Warning:  Trying to access array offset on value of type int in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 41
+[13-Jan-2022 10:19:10 UTC] PHP Warning:  Trying to access array offset on value of type int in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 42
+[13-Jan-2022 10:19:10 UTC] PHP Warning:  Trying to access array offset on value of type int in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 43
+[13-Jan-2022 10:19:10 UTC] PHP Warning:  Trying to access array offset on value of type int in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 45
+[13-Jan-2022 10:19:10 UTC] PHP Warning:  Trying to access array offset on value of type int in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 51
+[13-Jan-2022 10:19:10 UTC] PHP Warning:  Trying to access array offset on value of type int in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 52
+[13-Jan-2022 10:19:10 UTC] PHP Warning:  Trying to access array offset on value of type int in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 54
+[13-Jan-2022 10:19:10 UTC] PHP Warning:  Uninitialized string offset 0 in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 41
+[13-Jan-2022 10:19:10 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php:41
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 41
+[13-Jan-2022 10:22:38 UTC] PHP Warning:  Trying to access array offset on value of type int in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 41
+[13-Jan-2022 10:22:38 UTC] PHP Warning:  Trying to access array offset on value of type int in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 42
+[13-Jan-2022 10:22:38 UTC] PHP Warning:  Trying to access array offset on value of type int in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 43
+[13-Jan-2022 10:22:38 UTC] PHP Warning:  Trying to access array offset on value of type int in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 45
+[13-Jan-2022 10:22:38 UTC] PHP Warning:  Trying to access array offset on value of type int in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 51
+[13-Jan-2022 10:22:38 UTC] PHP Warning:  Trying to access array offset on value of type int in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 52
+[13-Jan-2022 10:22:38 UTC] PHP Warning:  Trying to access array offset on value of type int in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 54
+[13-Jan-2022 10:22:38 UTC] PHP Warning:  Uninitialized string offset 0 in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 41
+[13-Jan-2022 10:22:38 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php:41
+Stack trace:
+#0 {main}
+  thrown in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 41
+[13-Jan-2022 10:59:46 UTC] PHP Warning:  Undefined array key "reply" in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 47
+[13-Jan-2022 10:59:46 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 47
+[13-Jan-2022 10:59:46 UTC] PHP Warning:  Undefined array key "reply" in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 47
+[13-Jan-2022 10:59:46 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 47
+[13-Jan-2022 10:59:46 UTC] PHP Warning:  Undefined array key "reply" in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 47
+[13-Jan-2022 10:59:46 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 47
+[13-Jan-2022 11:01:41 UTC] PHP Warning:  Undefined array key "reply" in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 47
+[13-Jan-2022 11:01:41 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 47
+[13-Jan-2022 11:01:41 UTC] PHP Warning:  Undefined array key "reply" in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 47
+[13-Jan-2022 11:01:41 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 47
+[13-Jan-2022 11:01:41 UTC] PHP Warning:  Undefined array key "reply" in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 47
+[13-Jan-2022 11:01:41 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 47
+[13-Jan-2022 11:02:20 UTC] PHP Warning:  Undefined array key "reply" in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 47
+[13-Jan-2022 11:02:20 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 47
+[13-Jan-2022 11:02:20 UTC] PHP Warning:  Undefined array key "reply" in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 47
+[13-Jan-2022 11:02:20 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 47
+[13-Jan-2022 11:02:20 UTC] PHP Warning:  Undefined array key "reply" in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 47
+[13-Jan-2022 11:02:20 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 47
+[13-Jan-2022 11:05:05 UTC] PHP Warning:  Undefined array key "reply" in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 47
+[13-Jan-2022 11:05:05 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 47
+[13-Jan-2022 11:05:05 UTC] PHP Warning:  Undefined array key "reply" in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 47
+[13-Jan-2022 11:05:05 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 47
+[13-Jan-2022 11:05:05 UTC] PHP Warning:  Undefined array key "reply" in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 47
+[13-Jan-2022 11:05:05 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 47

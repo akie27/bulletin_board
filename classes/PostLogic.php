@@ -1,0 +1,49 @@
+<?php
+namespace postlogic;
+require_once '../common/dbc.php';
+
+class PostLogic{
+
+    /**
+     * 投稿データを取得
+     * @param string void   
+     * @return array|bool $user|false
+     */
+    public static function getPost(){
+        // SQLの準備
+        // SQLの実行
+        // SQLの結果を返す
+        $sql = 'SELECT * FROM posts';
+        
+        try {
+            $stm = dbConnect()->prepare($sql);
+            $stm->execute();
+            // SQLの結果を返す
+            $posts = $stm->fetchAll();
+
+            // 親に返信データを入れる
+            $display_posts = [];
+            foreach ($posts as $post){
+                if ($post['parent_post']){
+                    continue;
+                }
+
+                $post['reply'] = [];
+
+                foreach ($posts as $post2){
+                    if ($post2['parent_post'] == $post['id']){
+                        $post['reply'][] = $post2;
+                    }
+                }
+
+                $display_posts[] = $post;
+            }
+
+            return $display_posts;
+        } catch(\Exception $e) {
+            return false;
+        }
+    }
+
+}
+?>

@@ -11,7 +11,7 @@ $err = [];
 if(!$login_id = filter_input(INPUT_POST, 'login_id')){
     $err['login_id'] = 'ログインIDを記入してください。';
 }
-if(!$pass = filter_input(INPUT_POST, 'pass')){
+if(!$pass = filter_input(INPUT_POST, 'password')){
     $err['pass'] = 'パスワードを記入してください。';    
 }
 

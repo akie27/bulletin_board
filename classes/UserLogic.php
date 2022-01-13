@@ -55,7 +55,8 @@ class UserLogic{
             return $res;
         }
         
-        $_SESSION['msg'] = 'パスワードが一致しません';              
+        $_SESSION['msg'] = 'パスワードが一致しません';    
+        var_dump($user['pass']);          
         return $res;
     }
 
@@ -68,7 +69,7 @@ class UserLogic{
         // SQLの準備
         // SQLの実行
         // SQLの結果を返す
-        $sql = 'SELECT count(*) FROM users WHERE login_id = ?';
+        $sql = 'SELECT * FROM users WHERE login_id = ?';
 
         //ログインIDを配列に入れる
         $arr = [];
