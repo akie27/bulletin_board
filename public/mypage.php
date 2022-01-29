@@ -15,7 +15,8 @@ if(!$res){
 
 $login_user = $_SESSION['login_user'];
 
-$bbsData = postlogic\PostLogic::getPost();
+$postData = postlogic\PostLogic::getPost();
+
 
 ?>
 
@@ -34,9 +35,10 @@ $bbsData = postlogic\PostLogic::getPost();
 
     <p class="title">Web1ちゃんねる</p>
     <form action="list.php" method="POST" class="form_items list_form">
-
+        <input type="hidden" name="created_by" value="<?php echo h($login_user['name']); ?>">
+        <input type="hidden" name="parent_post" id="parent_post">
         <div class="list_items">
-        <?php foreach($bbsData as $post): ?>
+        <?php foreach($postData as $post): ?>
             <div class="list_titles">                
                 <span><?php echo h($post['id']); ?></span>
                 <span><?php echo h($post['created_by']); ?></span>
@@ -57,15 +59,15 @@ $bbsData = postlogic\PostLogic::getPost();
                 </div>  
                 <?php endforeach; ?>          
             </div>
-            <input type="text" name="reply_msg" placeholder="返信メッセージ" class="reply_msg">
-            <input type="submit" name="reply_btn" value="返信" class="btn list_btn reply_btn">
+            <input type="text" name="reply_msg" placeholder="返信メッセージ" id="reply_msg_<?php echo h($post['id']); ?>" class="reply_msg">
+            <input type="button" name="reply_btn" value="返信" onclick="reply(<?php echo h($post['id']); ?>)" class="btn list_btn reply_btn">
             <a href="http://" class="delete_url">この投稿を削除する</a>
         <?php endforeach; ?>
         </div>        
 
         <div class="post_msg">
-            <input type="text" name="post_msg" placeholder="投稿メッセージ" class="post_msg">
-            <input type="submit" name="post_btn" value="投稿" class="btn list_btn post_btn">
+            <input type="text" name="post_msg" id="post_msg" placeholder="投稿メッセージ" class="post_msg">
+            <input type="submit" name="post_btn" value="投稿" id="btn" class="btn list_btn post_btn">
         </div>
 
     </form>
@@ -76,5 +78,12 @@ $bbsData = postlogic\PostLogic::getPost();
     
     <?php require('../common/footer.php'); ?>
     
+    <script>
+        const reply = (id) => {
+            document.querySelector("#parent_post").value = id
+            document.querySelector("#post_msg").value = document.querySelector(`#reply_msg_${id}`).value
+            document.querySelector("#btn").click()
+        }
+    </script>
 </body>
 </html>

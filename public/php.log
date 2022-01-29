@@ -100,3 +100,64 @@ Stack trace:
 [13-Jan-2022 11:05:05 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 47
 [13-Jan-2022 11:05:05 UTC] PHP Warning:  Undefined array key "reply" in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 47
 [13-Jan-2022 11:05:05 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 47
+[23-Jan-2022 11:32:45 UTC] PHP Warning:  Undefined variable $bbsData in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 19
+[23-Jan-2022 11:32:45 UTC] PHP Warning:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php on line 19
+[23-Jan-2022 11:32:45 UTC] PHP Warning:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php on line 20
+[23-Jan-2022 11:32:45 UTC] PHP Warning:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php on line 21
+PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'created_by' cannot be null in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php:25
+Stack trace:
+#0 /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php(25): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/web1_bbs/public/mypage.php(19): postlogic\PostLogic::createPost(NULL)
+#2 {main}[23-Jan-2022 11:43:04 UTC] PHP Warning:  Undefined variable $bbsData in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 19
+[23-Jan-2022 11:43:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php on line 19
+[23-Jan-2022 11:43:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php on line 20
+[23-Jan-2022 11:43:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php on line 21
+PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'created_by' cannot be null in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php:25
+Stack trace:
+#0 /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php(25): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/web1_bbs/public/mypage.php(19): postlogic\PostLogic::createPost(NULL)
+#2 {main}[24-Jan-2022 09:57:29 UTC] PHP Warning:  Undefined array key "created_by" in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php on line 19
+[24-Jan-2022 09:57:29 UTC] PHP Warning:  Undefined array key "msg" in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php on line 20
+[24-Jan-2022 09:57:29 UTC] PHP Warning:  Undefined array key "created_at" in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php on line 21
+PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'created_by' cannot be null in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php:25
+Stack trace:
+#0 /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php(25): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/web1_bbs/public/mypage.php(19): postlogic\PostLogic::createPost(Array)
+#2 {main}[24-Jan-2022 10:08:29 UTC] PHP Warning:  Undefined array key "created_by" in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php on line 20
+[24-Jan-2022 10:08:29 UTC] PHP Warning:  Undefined array key "msg" in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php on line 21
+[24-Jan-2022 10:08:29 UTC] PHP Warning:  Undefined array key "created_at" in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php on line 22
+PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'created_by' cannot be null in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php:26
+Stack trace:
+#0 /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php(26): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/web1_bbs/public/mypage.php(19): postlogic\PostLogic::createPost(Array)
+#2 {main}[24-Jan-2022 10:11:53 UTC] PHP Warning:  Undefined array key "created_by" in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php on line 20
+[24-Jan-2022 10:11:53 UTC] PHP Warning:  Undefined array key "msg" in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php on line 21
+[24-Jan-2022 10:11:53 UTC] PHP Warning:  Undefined array key "created_at" in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php on line 22
+PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'created_by' cannot be null in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php:26
+Stack trace:
+#0 /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php(26): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/web1_bbs/public/mypage.php(20): postlogic\PostLogic::createPost(Array)
+#2 {main}[24-Jan-2022 10:14:14 UTC] PHP Warning:  Undefined array key "created_by" in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php on line 20
+[24-Jan-2022 10:14:14 UTC] PHP Warning:  Undefined array key "msg" in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php on line 21
+[24-Jan-2022 10:14:14 UTC] PHP Warning:  Undefined array key "created_at" in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php on line 22
+PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'created_by' cannot be null in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php:26
+Stack trace:
+#0 /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php(26): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/web1_bbs/public/mypage.php(20): postlogic\PostLogic::createPost(Array)
+#2 {main}PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'parent_post' at row 1 in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php:27
+Stack trace:
+#0 /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php(27): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/web1_bbs/public/list.php(17): postlogic\PostLogic::createPost(Array)
+#2 {main}PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'parent_post' at row 1 in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php:27
+Stack trace:
+#0 /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php(27): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/web1_bbs/public/list.php(26): postlogic\PostLogic::createPost(Array)
+#2 {main}PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'parent_post' at row 1 in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php:27
+Stack trace:
+#0 /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php(27): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/web1_bbs/public/list.php(24): postlogic\PostLogic::createPost(Array)
+#2 {main}PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'parent_post' at row 1 in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php:27
+Stack trace:
+#0 /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php(27): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/web1_bbs/public/list.php(24): postlogic\PostLogic::createPost(Array)
+#2 {main}

@@ -5,6 +5,34 @@ require_once '../common/dbc.php';
 class PostLogic{
 
     /**
+     * 投稿を追加する
+     * @param array $postData
+     * @return bool $res
+     */
+    public static function createPost($postData){
+        $res = false;
+
+        $sql = 'INSERT INTO posts (created_by, msg, created_at, parent_post) VALUES (?,?,?,?)';
+
+        //投稿データを配列に入れる
+        $arr = [];
+        echo json_encode($postData);
+        $arr[] = $postData['created_by'];
+        $arr[] = $postData['msg'];
+        $arr[] = $postData['created_at'];
+        $arr[] = $postData['parent_post'];
+        
+        try {
+            $stm = dbConnect()->prepare($sql);
+            $res = $stm->execute($arr);
+            return $res;
+        } catch(\Exception $e) {
+            error_log($e, 3, '../public/php.log'); //ログを出力
+            return $res;
+        }
+    }
+
+    /**
      * 投稿データを取得
      * @param string void   
      * @return array|bool $user|false
