@@ -7,14 +7,14 @@ if(!$logout = filter_input(INPUT_POST, 'logout')){
 }
 
 //ログインしているか判定し、セッションが切れていたらログインしてくださいとメッセージを出す
-$res = UserLogic::checkLogin();
+$res = userlogic\UserLogic::checkLogin();
 
 if(!$res){
     exit('セッションが切れましたので、ログインし直してください。');
 }
 
 //ログアウトする
-UserLogic::logout();
+userlogic\UserLogic::logout();
 
 ?>
 

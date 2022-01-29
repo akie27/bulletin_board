@@ -34,7 +34,7 @@ class PostLogic{
 
     /**
      * 投稿データを取得
-     * @param string void   
+     * @param void   
      * @return array|bool $user|false
      */
     public static function getPost(){
@@ -70,6 +70,26 @@ class PostLogic{
             return $display_posts;
         } catch(\Exception $e) {
             return false;
+        }
+    }
+
+    /**
+     * 投稿を削除する
+     * @param int $id
+     * @return bool $res
+     */
+    public static function deletePost($id){
+        $res = false;
+
+        $sql = 'DELETE FROM posts WHERE id = ?';
+        
+        try {
+            $stm = dbConnect()->prepare($sql);
+            $res = $stm->execute();
+            return $res;
+        } catch(\Exception $e) {
+            error_log($e, 3, '../public/php.log'); //ログを出力
+            return $res;
         }
     }
 

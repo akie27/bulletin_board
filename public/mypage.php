@@ -17,7 +17,6 @@ $login_user = $_SESSION['login_user'];
 
 $postData = postlogic\PostLogic::getPost();
 
-
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +33,7 @@ $postData = postlogic\PostLogic::getPost();
     <p>ログインユーザ:<?php echo h($login_user['name']); ?></p>    
 
     <p class="title">Web1ちゃんねる</p>
-    <form action="list.php" method="POST" class="form_items list_form">
+    <form action="mypage_form.php" method="POST" class="form_items list_form">
         <input type="hidden" name="created_by" value="<?php echo h($login_user['name']); ?>">
         <input type="hidden" name="parent_post" id="parent_post">
         <div class="list_items">
@@ -61,7 +60,7 @@ $postData = postlogic\PostLogic::getPost();
             </div>
             <input type="text" name="reply_msg" placeholder="返信メッセージ" id="reply_msg_<?php echo h($post['id']); ?>" class="reply_msg">
             <input type="button" name="reply_btn" value="返信" onclick="reply(<?php echo h($post['id']); ?>)" class="btn list_btn reply_btn">
-            <a href="http://" class="delete_url">この投稿を削除する</a>
+            <a href="delete.php?id=<?php echo h($post['id']); ?>" class="delete_url">この投稿を削除する</a>
         <?php endforeach; ?>
         </div>        
 
