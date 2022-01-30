@@ -7,8 +7,7 @@ $created_at = date("Y-m-d H:i:s");
 // echo $created_at;
 
 $parent_post = null;
-if($_POST["parent_post"] !== "")
-{
+if($_POST["parent_post"] !== ""){
     $parent_post = $_POST["parent_post"];
 }
 
