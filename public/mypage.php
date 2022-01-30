@@ -60,7 +60,7 @@ $postData = postlogic\PostLogic::getPost();
             </div>
             <input type="text" name="reply_msg" placeholder="返信メッセージ" id="reply_msg_<?php echo h($post['id']); ?>" class="reply_msg">
             <input type="button" name="reply_btn" value="返信" onclick="reply(<?php echo h($post['id']); ?>)" class="btn list_btn reply_btn">
-            <a href="delete.php?id=<?php echo h($post['id']); ?>" class="delete_url">この投稿を削除する</a>
+            <a href="delete.php?id=<?php echo h($post['id']); ?>" class="delete_url">この投稿を削除する</a>            
         <?php endforeach; ?>
         </div>        
 

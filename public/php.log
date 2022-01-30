@@ -175,4 +175,21 @@ PDOException: SQLSTATE[HY000]: General error: 2031 No data supplied for paramete
 Stack trace:
 #0 /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php(88): PDOStatement->execute()
 #1 /Applications/MAMP/htdocs/web1_bbs/public/mypage.php(19): postlogic\PostLogic::deletePost(NULL)
-#2 {main}
+#2 {main}PDOException: SQLSTATE[HY000]: General error: 2031 No data supplied for parameters in prepared statement in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php:88
+Stack trace:
+#0 /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php(88): PDOStatement->execute()
+#1 /Applications/MAMP/htdocs/web1_bbs/public/delete.php(8): postlogic\PostLogic::deletePost('10')
+#2 {main}PDOException: SQLSTATE[HY000]: General error: 2031 No data supplied for parameters in prepared statement in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php:88
+Stack trace:
+#0 /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php(88): PDOStatement->execute()
+#1 /Applications/MAMP/htdocs/web1_bbs/public/delete.php(8): postlogic\PostLogic::deletePost('10')
+#2 {main}PDOException: SQLSTATE[HY000]: General error: 2031 No data supplied for parameters in prepared statement in /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php:88
+Stack trace:
+#0 /Applications/MAMP/htdocs/web1_bbs/classes/PostLogic.php(88): PDOStatement->execute()
+#1 /Applications/MAMP/htdocs/web1_bbs/public/delete.php(8): postlogic\PostLogic::deletePost('10')
+#2 {main}[30-Jan-2022 02:53:43 UTC] PHP Warning:  Undefined array key "id" in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 63
+[30-Jan-2022 02:53:43 UTC] PHP Warning:  Undefined array key "id" in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 63
+[30-Jan-2022 02:53:43 UTC] PHP Warning:  Undefined array key "id" in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 63
+[30-Jan-2022 02:53:43 UTC] PHP Warning:  Undefined array key "id" in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 63
+[30-Jan-2022 02:53:43 UTC] PHP Warning:  Undefined array key "id" in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 63
+[30-Jan-2022 02:53:43 UTC] PHP Warning:  Undefined array key "id" in /Applications/MAMP/htdocs/web1_bbs/public/mypage.php on line 63
