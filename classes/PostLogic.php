@@ -81,11 +81,11 @@ class PostLogic{
     public static function deletePost($id){
         $res = false;
         
-        $sql = 'DELETE FROM posts WHERE id=?';             
+        $sql = 'DELETE FROM posts WHERE id=:id';             
         try {
             $stm = dbConnect()->prepare($sql);
             $res = $stm->execute(array($id));
-            $stm = $stm->fetch();
+            $stm->bindValue(':id', $id);
             return $res;            
         } catch(\Exception $e) {
             error_log($e, 3, '../public/php.log'); //ログを出力

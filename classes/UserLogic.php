@@ -63,7 +63,7 @@ class UserLogic{
     /**
      * ログインIDからユーザを取得
      * @param string $login_id     
-     * @return array|bool $user|false
+     * @return array $user
      */
     public static function getUserByLoginId($login_id){
         // SQLの準備
@@ -82,7 +82,8 @@ class UserLogic{
             $user = $stm->fetch();
             return $user;
         } catch(\Exception $e) {
-            return false;
+            error_log($e, 3, '../public/php.log'); //ログを出力
+            return null;
         }
     }
 
